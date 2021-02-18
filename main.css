@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #009f77;
+  --blue: #200a74;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+header {
+  padding: 1em;
+}
+main {
+  padding: 1em;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  font-size: 1.3rem;
+  color: #444444;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  color: var(--blue);
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+}
+.tagline {
+  text-align: center;
+  margin-top: 0;
+  border-bottom: 1px solid var(--green);
+  padding-bottom: 0.5em;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  width: 100%;
+}
+
+.seediv {
+  display: flex;
+  align-items: center;
+}
+
+.seediv img {
+  width: 24px;
+}
+
+.seediv label {
+  font-size: 1.2em;
+}
+
+#seed {
+  height: 48px;
+  margin: 0 0.5em;
+  font-size: 1.2em;
+}
+
+.controls {
+  display: flex;
+}
+
+.controls > button {
+  margin: 0 0.5em;
+  height: 48px;
+}
+
+.howto {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+button {
+  background: white;
+  transition: background 0.2s ease;
+  border-radius: 2px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+button:hover {
+  background: var(--green);
+  cursor: pointer;
+  color: white;
+}
+
+canvas {
+  border: 5px solid var(--green);
+  margin: 2em 0 0 0;
+  width: 100%;
+}
+
+.guess_controls {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 50px; /* Specified height */
+  background: white;
+  border: 5px solid var(--green);
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 10px; /* Set a specific slider handle width */
+  height: 50px; /* Slider handle height */
+  background: black; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 10x; /* Set a specific slider handle width */
+  height: 50px; /* Slider handle height */
+  background: black; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.white-text {
+  color: white;
+}
+
+#card {
+  width: 50%;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+
+#card > div {
+  width: 50%;
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+.left-card {
+  background: var(--green);
+}
+
+.right-card {
+  background: var(--blue);
+}
+
+.scoreboard {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  margin-top: 2em;
+}
+
+.scoreboard > div {
+  width: 50%;
+  text-align: center;
+}
+
+.score-controls {
+  width: 80%;
+  margin: auto;
+  font-size: 2em;
+}
+
+.score-controls input[type="number"] {
+  width: 50px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 32px;
+  font-style: bold;
+  -moz-appearance: textfield;
+  border: 1px #dddddd solid;
+}
+
+.score {
+  text-align: center;
+  font-size: 2em;
+}
+
+footer {
+  background: var(--blue);
+  color: white;
+  margin: 2em 0 0 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer a,
+footer a:visited,
+footer a:hover {
+  color: white;
+}

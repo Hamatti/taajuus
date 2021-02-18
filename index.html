@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An online adaption of great board game Wavelength"
+    />
+    <title>Taajuus – an online adaptation of Wavelength</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Taajuus</h1>
+      <p class="tagline">an online adaption of Wavelength for A-Team Smileys</p>
+      <div class="flex-container">
+        <div class="seediv">
+          <label for="seed">Seed</label>
+          <input
+            type="text"
+            id="seed"
+            placeholder="10003"
+            size="8"
+            class="white-text"
+          />
+          <button onclick="copySeedURL()">
+            <img src="img/copy.png" alt="Copy seed URL to clipboard" />
+          </button>
+          <button onclick="toggleSeedVisibility()">
+            <img src="img/show-seed.png" alt="Show seed input" />
+          </button>
+        </div>
+        <div class="controls">
+          <button onclick="newRound()">New clue</button>
+          <button onclick="makeGuess()">Guess</button>
+          <button onclick="showTargets()">Show targets</button>
+        </div>
+        <div class="howto">
+          <a href="howto.html">How to play?</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <canvas id="board" width="1000" height="150"></canvas>
+      <div class="guess_controls">
+        <input
+          type="range"
+          min="0"
+          max="1000"
+          value="500"
+          class="slider"
+          id="guess"
+          oninput="guessRange.value = Math.round(guess.value/10)"
+        />
+        <output id="guessRange">50</output>
+      </div>
+
+      <div id="card"></div>
+      <div id="score_display"></div>
+      <div class="scoreboard">
+        <div>
+          <div>Team 1</div>
+          <div class="score-controls">
+            <button onclick="document.querySelector('#score-team-1').value--;">
+              -
+            </button>
+            <input id="score-team-1" type="number" min="0" value="0" />
+            <button onclick="document.querySelector('#score-team-1').value++;">
+              +
+            </button>
+          </div>
+        </div>
+        <div>
+          <div>Team 2</div>
+          <div class="score-controls">
+            <button onclick="document.querySelector('#score-team-2').value--;">
+              -
+            </button>
+            <input id="score-team-2" type="number" min="0" value="0" />
+            <button onclick="document.querySelector('#score-team-2').value++;">
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Built with <span role="img" aria-label="heart">❤️</span> by
+        <a href="https://hamatti.org">Juhis</a>.
+      </p>
+      <p>
+        Inspired by MIT licensed
+        <a href="https://github.com/gjeuken/telewave">Telewave</a>
+      </p>
+    </footer>
+    <script src="js/cards.js"></script>
+    <script src="js/globals.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/seedrandom.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
