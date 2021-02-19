@@ -6,6 +6,8 @@ Taajuus is an online adaption of the wonderful party game <a href="https://www.w
 
 _Taajuus_ is Finnish for frequency which is one half of the equation to wavelenghth, since this game is missing the most important part of the equation: physical interaction with friends.
 
+You can play it at [taajuus.netlify.app](https://taajuus.netlify.app).
+
 ## How to play
 
 ### Rules of the game

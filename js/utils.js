@@ -12,7 +12,7 @@ function copyStringToClipboard(str) {
 }
 
 function copySeedURL() {
-  const seed = seedInputNode.value;
+  const seed = GLOBALS.nodes.seedInput.value;
   const seedURL = `${window.location.origin}${window.location.pathname}?seed=${seed}`;
   copyStringToClipboard(seedURL);
 }
