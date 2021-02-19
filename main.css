@@ -87,6 +87,12 @@ main {
   font-size: 0.8em;
 }
 
+.howto a,
+.howto a:visited,
+.howto a:hover {
+  color: var(--blue);
+  font-size: 1.2em;
+}
 button {
   background: white;
   transition: background 0.2s ease;
@@ -190,6 +196,9 @@ canvas {
   width: 80%;
   margin: auto;
   font-size: 2em;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
 }
 
 .score-controls input[type="number"] {
@@ -200,6 +209,7 @@ canvas {
   font-style: bold;
   -moz-appearance: textfield;
   border: 1px #dddddd solid;
+  margin: 0 0.5em;
 }
 
 .score {
@@ -220,4 +230,10 @@ footer a,
 footer a:visited,
 footer a:hover {
   color: white;
+}
+
+span[contenteditable]::after {
+  content: "✏️";
+  font-size: 0.8em;
+  padding-left: 1em;
 }

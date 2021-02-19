@@ -14,7 +14,8 @@
   <body>
     <header>
       <h1>Taajuus</h1>
-      <p class="tagline">an online adaption of Wavelength for A-Team Smileys</p>
+      <p class="tagline">an online adaption of Wavelength</p>
+
       <div class="flex-container">
         <div class="seediv">
           <label for="seed">Seed</label>
@@ -37,9 +38,6 @@
           <button onclick="makeGuess()">Guess</button>
           <button onclick="showTargets()">Show targets</button>
         </div>
-        <div class="howto">
-          <a href="howto.html">How to play?</a>
-        </div>
       </div>
     </header>
     <main>
@@ -61,7 +59,10 @@
       <div id="score_display"></div>
       <div class="scoreboard">
         <div>
-          <div>Team 1</div>
+          <div>
+            <span contenteditable>Team 1</span>
+          </div>
+
           <div class="score-controls">
             <button onclick="document.querySelector('#score-team-1').value--;">
               -
@@ -73,7 +74,9 @@
           </div>
         </div>
         <div>
-          <div>Team 2</div>
+          <div>
+            <span contenteditable id="team2-name">Team 2</span>
+          </div>
           <div class="score-controls">
             <button onclick="document.querySelector('#score-team-2').value--;">
               -
@@ -91,6 +94,9 @@
       <p>
         Built with <span role="img" aria-label="heart">❤️</span> by
         <a href="https://hamatti.org">Juhis</a>.
+      </p>
+      <p>
+        <a href="howto.html">How to play?</a>
       </p>
       <p>
         Inspired by MIT licensed
