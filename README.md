@@ -1,6 +1,6 @@
 # Taajuus
 
-![Taajuus game board with prompt Bad advice / Good advice and target at around 38%](img/screenshot.png)
+![Taajuus](/img/taajuus-logo.png)
 
 Taajuus is an online adaption of the wonderful party game <a href="https://www.wavelength.zone/">Wavelength</a>. It was built during the pandemic times when playing a physical game was impossible. If the pandemic is already over, go and buy the game, you won't regret it.
 
